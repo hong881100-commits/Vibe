@@ -19,6 +19,14 @@ st.markdown(
         font-size: 3rem; color: white; font-weight: 700;
         margin: 0 auto;
     }
+    .product-photo {
+        width: 180px; height: 180px; border-radius: 16px;
+        background: linear-gradient(135deg, #ffb86a, #ff6a9e);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 4rem;
+        margin: 0 auto;
+    }
+    .price { font-size: 1.4rem; font-weight: 700; text-align: center; margin-top: 0.5rem; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -52,3 +60,19 @@ st.write(
 st.write("")
 st.subheader("연락처")
 st.write("이메일: hong881100@gmail.com")
+
+st.write("")
+st.markdown("---")
+st.subheader("말랑이 판매")
+
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.markdown('<div class="product-photo">🧸</div>', unsafe_allow_html=True)
+    st.caption("실제 상품 사진으로 교체 예정")
+
+st.markdown('<p class="price">5,000원</p>', unsafe_allow_html=True)
+
+st.write("**결제 방법**: 계좌이체 (현금)")
+st.write("카카오뱅크 1111111111 (예금주: 홍지효)")
+st.write("입금 확인 후 택배로 발송됩니다.")
+st.caption("※ 예시로 등록된 계좌 정보입니다.")
