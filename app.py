@@ -33,8 +33,8 @@ with col2:
 st.markdown("---")
 
 # ---- 자기소개 ----
-st.markdown('<p class="name">이름을 입력하세요</p>', unsafe_allow_html=True)
-st.markdown('<p class="tagline">한 줄 소개를 입력하세요</p>', unsafe_allow_html=True)
+st.markdown('<p class="name">홍지효</p>', unsafe_allow_html=True)
+st.markdown('<p class="tagline">안녕하세요 홍지효 입니다 잘부탁드립니다</p>', unsafe_allow_html=True)
 
 st.write("")
 st.subheader("소개")
