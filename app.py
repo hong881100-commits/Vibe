@@ -1,6 +1,10 @@
+from pathlib import Path
+
 import streamlit as st
 
 st.set_page_config(page_title="My Homepage", page_icon="🙂", layout="centered")
+
+DEFAULT_PHOTO = Path(__file__).parent / "profile.jpg"
 
 st.markdown(
     """
@@ -26,6 +30,8 @@ with col2:
     uploaded = st.file_uploader("프로필 사진 업로드", type=["png", "jpg", "jpeg"], label_visibility="collapsed")
     if uploaded is not None:
         st.image(uploaded, width=180)
+    elif DEFAULT_PHOTO.exists():
+        st.image(str(DEFAULT_PHOTO), width=180)
     else:
         st.markdown('<div class="avatar-placeholder">사진</div>', unsafe_allow_html=True)
         st.caption("위에서 사진을 업로드하면 프로필 사진으로 표시됩니다.")
@@ -45,4 +51,4 @@ st.write(
 
 st.write("")
 st.subheader("연락처")
-st.write("이메일: your-email@example.com")
+st.write("이메일: hong881100@gmail.com")
